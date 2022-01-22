@@ -15,5 +15,5 @@ const role_vs_lead_source = {
 
 const lead_source_field = ZDK.Page.getField('Lead_Source');
 
-lead_source_field.setValue(role_vs_lead_source[user_data.role.name]);
+lead_source_field.setValue(role_vs_lead_source[user_data.role.name]); // set the lead source based on role name
 lead_source_field.setReadOnly(true);
