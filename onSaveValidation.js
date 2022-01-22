@@ -15,6 +15,7 @@ const lead_data = (await response.json())[0];
 if (lead_data) {
     return true;
 } else {
-   ZDK.Client.showAlert('Email not valid');
-   return false; // prevent save if invalid
+    const user_response = ZDK.Client.showConfirmation('Email not valid. Are you sure you want to continue?'); // user confirmation returns true/false
+    
+    return user_response;
 }
