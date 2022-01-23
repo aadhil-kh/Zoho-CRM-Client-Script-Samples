@@ -3,7 +3,9 @@
  * Page: Create record
  * Event: onChange
  * Field: Account Lookup
- * Description: Client Script to populate default products based on choosen Account's Industry
+ * Description: Client Script to populate subform rows
+ * Scenario: Populate default products based on choosen Account's Industry
+ * Similar: https://github.com/aadhilrf/Zoho-CRM-Client-Script-Samples/blob/main/freezeLayer.js
  */
 
 const account_data = ZDK.Apps.CRM.Accounts.fetchById(value.id); // value is lookup object { id, name }

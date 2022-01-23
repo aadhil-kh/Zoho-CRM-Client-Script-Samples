@@ -3,7 +3,8 @@
  * Page: Create record
  * Event: onChange
  * Field: Email
- * Description: Client Script to fetch lead data from thrid party site and populate in create record page
+ * Description: Client Script to access thrid party site
+ * Scenario: Fetch lead data from third party site and populate name, phone, website and company in create record page
  * Constraints: jsonplaceholder.typicode.com or the domain to be accessed has to be added in Setup -> Users and Control -> Trusted Domains
  */
 
