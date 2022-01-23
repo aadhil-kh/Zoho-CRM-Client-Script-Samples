@@ -11,11 +11,15 @@ const account_data = ZDK.Apps.CRM.Accounts.fetchById(value.id); // value is look
 // get the products using search api
 const products = ZDK.Apps.CRM.Products.searchByCriteria('(Product_Category:equals:' + account_data.Industry + ')'); 
 
-ZDK.Page.getField('Quoted_Items').setValue(products.map(p => ({
-    Product_Name: {
-        id: p.id,
-        name: p.Product_Name
-    },
-    Quantity: 1,
-    List_Price: p.Unit_Price
-})));
+if (products.length) {
+    ZDK.Page.getField('Quoted_Items').setValue(products.map(p => ({
+        Product_Name: {
+            id: p.id,
+            name: p.Product_Name
+        },
+        Quantity: 1,
+        List_Price: p.Unit_Price
+    })));
+} else {
+    ZDK.Client.showMessage(`No products available for the Industry: ${account_data.Industry}`);
+}
