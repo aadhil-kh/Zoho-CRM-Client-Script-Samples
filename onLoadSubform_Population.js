@@ -1,6 +1,6 @@
 /**
  * Module: Leads
- * Page: Create record
+ * Page: Edit record
  * Event: onLoad
  * Description: Prepopulate dummy subform data based on 
  */
